@@ -16,7 +16,7 @@ session_start();
 </head>
 <body style='height : 100vh;' class="d-flex flex-column justify-content-center align-items-center bg-info " >
 <?php
-     if(isset($_SESSION["error"])){
+     if(($_SESSION["error"]== 'Username Or Password Incorrect')){
     $error = $_SESSION["error"];
     echo "<div class='text-warning my-3' >Username Or Password Incorrect</div>";
     }          
