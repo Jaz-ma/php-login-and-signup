@@ -47,13 +47,7 @@ if(!isset($_SESSION['userun'])){
         <?php
         }
 
-        else{
-
-            ?>
-            <li><a href="#">Sing Up </a></li>
-        <li><a href="index.php" class="logio-btn">Login</a></li>
-        <?php
-        }
+       
         ?>
     </ul>
     
