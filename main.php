@@ -19,7 +19,7 @@ if(!isset($_SESSION['userun'])){
     <link rel="stylesheet" href="css/style.css">
     <title>Home</title>
 </head>
-<body>
+<body id="backround">
 <header class="bg-dark text-light">
 <nav class="">
     <div class="main-list">
