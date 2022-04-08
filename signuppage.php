@@ -31,7 +31,7 @@ session_start();
         <input type="text" name ="username" required>
         <label class="text-secondary my-1" for="password">Password</label>
         <input type="password" name ="password" required>
-        <button class="btn btn-primary" type="submit" name="submit">Sign Up</button>      
+        <button class="btn btn-primary mt-4" type="submit" name="submit">Sign Up</button>      
     </form>
     <p class="mt-4 ms-3">Already Have An Account ? Log In
     <a href="index.php">Here</a>      

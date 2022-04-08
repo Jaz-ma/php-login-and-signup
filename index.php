@@ -1,6 +1,12 @@
 <?php 
-session_start();
+        session_start();
 
+        //if login  session is set this page  reroutes user to the main page
+
+        if(isset($_SESSION['userun'])){ 
+            header("Location: main.php");
+            exit();
+        }
 ?>
 
 
@@ -14,10 +20,14 @@ session_start();
     <link rel="stylesheet" href="css/style.css">
     <title>login</title>
 </head>
-<body style='height : 100vh;' class="d-flex flex-column justify-content-center align-items-center bg-info " >
+<body>
+
+
+
+<div style='height : 100vh;' class="d-flex flex-column justify-content-center align-items-center bg-info ">
 <?php
-     if(($_SESSION["error"]== 'Username Or Password Incorrect')){
-    $error = $_SESSION["error"];
+     if(isset($_SESSION["error"])){
+
     echo "<div class='text-warning my-3' >Username Or Password Incorrect</div>";
     }          
     ?>  
@@ -27,11 +37,13 @@ session_start();
         <input type="text" name ="username" required>
         <label class="text-secondary my-1" for="password">Password</label>
         <input type="password" name ="password" required>
-        <button class="btn btn-primary" type="submit" name="submit">Log In</button>      
+        <button class="btn btn-primary mt-4" type="submit" name="submit">Log In</button>      
     </form>
     <p class="mt-4 ms-3">Don't have an account yet? Sign up 
     <a href="signuppage.php">Here</a>      
     </p>
+</div>
+
 
     
 

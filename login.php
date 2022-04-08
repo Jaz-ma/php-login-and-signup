@@ -28,9 +28,9 @@ $recipes= $stmt->fetchAll();
 
 foreach ($recipes as $recipe) {
     if($username ==$recipe['username'] && $psswd==$recipe['psswrd'] ){
-        $_SESSION['logged in'] = 'logged in';
+        $_SESSION['userun'] = $recipe['username'];
         header("Location: main.php" );
-        die();
+        exit();
     }
 }
 
